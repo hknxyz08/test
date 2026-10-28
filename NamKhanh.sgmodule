@@ -1,6 +1,7 @@
 #!name=Locket VIP & YouTube Premium
 #!desc=Bản tự host và tối ưu mã nguồn bởi Hoàng Khánh Nam.
 #!author=Hoang Khanh Nam (Original code: Duy Vinh & Contributors)
+#!url=https://raw.githubusercontent.com/hknxyz08/test/main/NamKhanh.sgmodule
 
 [Script]
 # 1. Xóa Cache (Bắt buộc phải có để không kẹt hạng)
@@ -9,7 +10,7 @@ deleteHeader = type=http-request, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(
 # 2. Hack Locket Gold
 revenuecat = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$), script-path=https://raw.githubusercontent.com/hknxyz08/test/main/locket.js, requires-body=true, max-size=-1, timeout=60
 
-# 3. Mở khóa Caption & Cài đặt Firebase (Chứa Đặc quyền Khánh Nam)
+# 3. Mở khóa Caption & Firebase (Chứa Đặc quyền Khánh Nam)
 locket_rc = type=http-response, pattern=^https:\/\/firebaseremoteconfig\.googleapis\.com\/v1\/projects\/locket-4252a\/.+, script-path=https://raw.githubusercontent.com/hknxyz08/test/main/firebase.js, requires-body=true, max-size=-1, timeout=60
 
 # 4. Chặn quảng cáo YouTube Premium
